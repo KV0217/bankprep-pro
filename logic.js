@@ -61,14 +61,14 @@ const DQ_POOL=[
   {q:'Which of the following is NOT a function of commercial banks?',o:['Accepting deposits','Printing currency notes','Lending loans','Providing locker facilities'],c:1,e:'Printing currency is the exclusive function of the central bank (RBI).'},
   {q:'NABARD stands for',o:['National Bank for Agriculture and Rural Development','National Bureau of Agriculture and Rural Districts','National Banking and Rural Development','None of these'],c:0,e:'NABARD – National Bank for Agriculture and Rural Development, estd 1982.'},
   {q:'What is the full form of SWIFT in banking?',o:['Society for Worldwide Interbank Financial Telecommunication','System for Wire Interbank Financial Transfer','Secure Worldwide Interbank Finance Technology','None of these'],c:0,e:'SWIFT enables secure international money and security transfers between banks.'},
-  {q:'The minimum capital adequacy ratio (CAR) for Indian banks as per Basel III norms is',o:['8%','9%','10%','12%'],c:1,e:'RBI mandates CAR of 9% for Indian banks (higher than Basel III's 8%).'},
+  {q:'The minimum capital adequacy ratio (CAR) for Indian banks as per Basel III norms is',o:['8%','9%','10%','12%'],c:1,e:'RBI mandates CAR of 9% for Indian banks (higher than Basel III norm of 8%).'},
   {q:'Which index measures inflation at the consumer level in India?',o:['WPI','CPI','BSE Sensex','GDP Deflator'],c:1,e:'CPI (Consumer Price Index) measures price changes at the retail/consumer level.'},
   {q:'NEFT transactions are settled in',o:['Real time','Batches throughout the day','Once a day','Twice a day'],c:1,e:'NEFT settles in half-hourly batches. RTGS settles in real time.'},
   {q:'The Statutory Liquidity Ratio (SLR) requires banks to maintain liquid assets as a percentage of their',o:['Net demand and time liabilities (NDTL)','Total assets','Total deposits','Capital funds'],c:0,e:'SLR is a % of NDTL that banks must maintain in govt securities/gold/cash.'},
   {q:'Which of the following is a Capital Market instrument?',o:['Treasury Bill','Certificate of Deposit','Equity Share','Commercial Paper'],c:2,e:'Equity shares are long-term capital market instruments. T-Bills, CDs, CPs are money market instruments.'},
   {q:'The headquarters of SEBI is in',o:['New Delhi','Mumbai','Hyderabad','Bengaluru'],c:1,e:'SEBI (Securities and Exchange Board of India) HQ is in Mumbai (Bandra Kurla Complex).'},
   {q:'What does NPA stand for in banking?',o:['Net Profit Account','Non-Performing Asset','New Profit Analysis','National Payment Authority'],c:1,e:'NPA: a loan where borrower has not made interest or principal payments for 90+ days.'},
-  {q:'The term "Fiscal Policy" refers to',o:['RBI's monetary decisions','Government's tax and spending decisions','Exchange rate management','Foreign trade policy'],c:1,e:'Fiscal policy = government decisions on taxation and public expenditure.'},
+  {q:'The term "Fiscal Policy" refers to',o:['RBI monetary decisions','Government tax and spending decisions','Exchange rate management','Foreign trade policy'],c:1,e:'Fiscal policy = government decisions on taxation and public expenditure.'},
   {q:'Pradhan Mantri Jan Dhan Yojana (PMJDY) was launched in the year',o:['2012','2013','2014','2015'],c:2,e:'PMJDY launched on 28 August 2014 to ensure financial inclusion for all households.'},
   {q:'Which of the following is the regulator of insurance sector in India?',o:['RBI','SEBI','IRDAI','PFRDA'],c:2,e:'IRDAI – Insurance Regulatory and Development Authority of India regulates insurance.'},
   {q:'The concept of "Priority Sector Lending" mandates banks to lend what % of ANBC to priority sectors?',o:['30%','35%','40%','45%'],c:2,e:'Banks must lend 40% of Adjusted Net Bank Credit to priority sectors (agriculture, MSME, etc.).'},
@@ -1195,3 +1195,4 @@ init();
 </script>
 </body>
 </html>
+

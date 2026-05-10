@@ -178,6 +178,7 @@ body.dark .essay-stat{background:#334155}
 <div class="kbd-hint" id="kbd-hint">1–4 select · Enter next · ← → flashcards</div>
 
 <script>
+
 const Q=[
 // ═══ QUANTITATIVE APTITUDE ═══
 // Percentage
@@ -399,6 +400,7 @@ const Q=[
 {id:'gk009',s:'general_knowledge',t:'international_organizations',d:'medium',q:'BRICS currently includes how many countries (2024)?',o:['5','7','9','11'],c:2,e:'BRICS expanded in January 2024 to include Egypt, Ethiopia, Iran, Saudi Arabia, UAE in addition to original 5 (Brazil, Russia, India, China, South Africa). Total = 9 active members.',x:['sbi_mains','rbi_phase1']},
 {id:'gk010',s:'general_knowledge',t:'national_facts',d:'medium',q:'The Constitution of India was adopted on:',o:['15 August 1947','26 January 1950','26 November 1949','2 October 1948'],c:2,e:'The Constitution was adopted by the Constituent Assembly on November 26, 1949, and came into force on January 26, 1950 (Republic Day).',x:['sbi_prelims','sbi_mains']},
 ];
+
 // Additional Questions — Part 2
 Q.push(
 // ═══ More Quantitative Aptitude ═══
@@ -486,6 +488,7 @@ Q.push(
 {id:'ba049',s:'banking_awareness',t:'banking_terms',d:'easy',q:'What is a Fixed Deposit (FD)?',o:['A deposit that can be withdrawn anytime','A deposit kept for a fixed period at a fixed interest rate','A deposit linked to stock market','A deposit for government employees only'],c:1,e:'Fixed Deposit: A savings instrument where money is deposited for a fixed period (7 days to 10 years) at a predetermined interest rate. Interest rates higher than savings account. Pre-mature withdrawal attracts penalty.',x:['sbi_prelims']},
 {id:'ba050',s:'banking_awareness',t:'banking_terms',d:'medium',q:'Merchant Discount Rate (MDR) is:',o:['Interest on business loans','Fee charged by banks from merchants for accepting card/digital payments','Discount offered to wholesale buyers','Reduced exchange rate for merchants'],c:1,e:'MDR is the fee (% of transaction value) deducted by banks/payment aggregators from merchants for processing card and digital payments. Government waived MDR for UPI transactions (merchants pay zero MDR on UPI).',x:['sbi_mains','rbi_phase1']},
 );
+
 // ═══ DATA INTERPRETATION SETS ═══
 // Each question embeds the full data table for standalone reading
 
@@ -576,6 +579,7 @@ Q.push(
 {id:'ra039',s:'reasoning',t:'number_coding',d:'medium',q:'In a number coding system: 4+3=41, 5+4=54, 6+5=65. What is 8+7?',o:['87','78','815','158'],c:0,e:'Pattern: a+b=a(a+b)? No. 4+3: result=41. 4×10+1=41, but 4+3+34=41? Or: result is ab concatenated: 4,3→43 not 41. Actually: 4+3=7, but 4^1=4, so maybe 4+3=sum of digits adjacent? 4+3=41 means (4)(3+1)? No. 4,3→41: 4×10+(4-3)=41? Yes: 4×10+(4-3)=40+1=41. 5×10+(5-4)=50+1=51 not 54. Try: (a)(a-b): 4→41=4and(4-3=1). 5→54=5and(5-4... wait 54=5and4? 5 and(5-1)=4. 6→65=6and(6-1=5). So pattern: result = a|(a-1). 8|(8-1) = 87.',x:['sbi_prelims','sbi_mains']},
 {id:'ra040',s:'reasoning',t:'matrix_coding',d:'medium',q:'A word is coded using the matrix:\nMatrix Row 1 (0-4): A=00, B=01, C=02, D=03, E=04\nMatrix Row 2 (0-4): F=10, G=11, H=12, I=13, J=14\nThe word CAGE is coded as:',o:['02-00-11-04','02-00-11-14','02-04-11-04','00-02-11-04'],c:0,e:'C=02, A=00, G=11, E=04. CAGE = 02-00-11-04.',x:['sbi_prelims','sbi_mains']},
 );
+
 // ═══ COMPREHENSIVE QUESTION BANK — PART 4 ═══
 
 Q.push(
@@ -690,6 +694,7 @@ Q.push(
 {id:'comp034',s:'computer',t:'hardware_software',d:'medium',q:'The difference between 4G and 5G mobile technology primarily involves:',o:['Only speed difference','Speed (100x faster), latency (10x lower), massive device connectivity (IoT)','Only coverage difference','Only cost difference'],c:1,e:'5G vs 4G: Speed (5G up to 10Gbps vs 4G 100Mbps), Ultra-low latency (1ms vs 50ms), Massive IoT device support, Network slicing. Critical for Industry 4.0, smart banking, and autonomous systems.',x:['sbi_prelims','sbi_mains']},
 {id:'comp035',s:'computer',t:'internet_basics',d:'hard',q:'Machine Learning differs from traditional programming in that:',o:['ML programs are written in different languages','ML systems learn patterns from data rather than following explicit programmed rules','ML requires more hardware only','ML is only used for gaming'],c:1,e:'Traditional programming: Rules explicitly coded by programmers. Machine Learning: System identifies patterns from training data and develops its own rules. Used in bank fraud detection (learns patterns of fraudulent transactions from historical data).',x:['sbi_mains','rbi_phase1']},
 );
+
 // ═══ ADDITIONAL COMPREHENSIVE QUESTION BANK — PART 5 ═══
 Q.push(
 // More Banking Awareness
@@ -755,6 +760,7 @@ Q.push(
 {id:'comp039',s:'computer',t:'internet_basics',d:'medium',q:'What is a Firewall?',o:['Hardware device for faster internet','Security system monitoring and controlling network traffic based on rules','A type of computer virus','Email filtering software'],c:1,e:'Firewall: Security system (hardware or software) that monitors incoming and outgoing network traffic and decides whether to allow or block specific traffic based on pre-defined security rules. First line of defense against cyber threats.',x:['sbi_prelims','sbi_mains']},
 {id:'comp040',s:'computer',t:'cybersecurity',d:'medium',q:'What is SQL Injection?',o:['A database backup method','Malicious code insertion into database queries to manipulate or access unauthorized data','A type of server hardware','A programming language'],c:1,e:'SQL Injection: Attack where malicious SQL code is inserted into input fields, which then gets executed against the database. Can allow attackers to view, modify, or delete database data. Prevention: Input validation, parameterized queries, prepared statements.',x:['sbi_mains','rbi_phase1']},
 );
+
 const FC=[
 // Banking Basics
 {id:'fc001',cat:'Banking Basics',front:'What is Repo Rate?',back:'Rate at which RBI lends short-term money to commercial banks. An increase → credit costlier → reduces inflation. Current: 6.25% (Feb 2025)',difficulty:'easy',tags:['rbi','monetary-policy']},
@@ -872,6 +878,7 @@ const FC=[
 {id:'fc099',cat:'Exam Strategy',front:'Current Affairs Coverage Plan',back:'Daily: 15 min news reading (The Hindu/Economic Times). Weekly: Banking/Economy roundup. Monthly: Compilation of key appointments, schemes, summits. Focus: RBI decisions, Budget, G20, Economic survey key data.',difficulty:'easy',tags:['strategy','current-affairs']},
 {id:'fc100',cat:'Exam Strategy',front:'Interview Preparation Timeline',back:'Week 1: Know your background inside-out (education, projects, location). Week 2: Banking concepts (RBI, monetary policy, NPA, schemes). Week 3: Current affairs last 6 months. Week 4: Mock interviews + GD practice.',difficulty:'medium',tags:['strategy','interview']},
 ];
+
 // Additional Flashcards — Part 2
 FC.push(
 // Economics & Finance (advanced)
@@ -954,7 +961,8 @@ FC.push(
 {id:'fc169',cat:'Interview Tips',front:'Group Discussion — Opening Strategies',back:'1. Start with a fact/statistic: "According to RBI data, India\'s gross NPA has fallen to 3.2%..."\n2. Define the topic: "Financial inclusion, which refers to access to affordable financial services for all..."\n3. Present the debate: "This topic has two dimensions — achieved and remaining challenges..."\n4. Give a quote: "As Nelson Mandela said, \'A good head and a good heart are always a formidable combination\'..."\nAvoid: Starting with a very controversial statement, starting without preparation.',difficulty:'easy',tags:['gd','interview']},
 {id:'fc170',cat:'Interview Tips',front:'GD Topics — Banking/Economy (2024-25)',back:'Frequent GD topics:\n• Financial Inclusion: Mission accomplished or miles to go?\n• Should India ban cryptocurrency?\n• Digital Rupee — benefits and challenges\n• NPA crisis: Who is responsible — banks or government?\n• UPI vs credit cards — which model wins?\n• Women\'s financial inclusion — challenges and solutions\n• Should priority sector lending targets be increased?\n• Green banking — necessity or marketing?\n• India at $5 trillion — achievable by 2027?',difficulty:'easy',tags:['gd','topics']}
 );
-const STUDY={
+
+﻿const STUDY={
 quantitative_aptitude:[
 {title:'Percentage',
 intro:'Percentage means "per hundred". It is a ratio with denominator 100. Percentages are fundamental to profit/loss, SI/CI, data interpretation, and almost every quantitative topic.',
@@ -1222,7 +1230,8 @@ tips:['PCI-DSS: Payment Card Industry Data Security Standard — mandatory for c
 mistakes:['Thinking a strong password alone is sufficient security','Confusing encryption and hashing (hashing is one-way, encryption is reversible)','Not knowing that HTTP is unencrypted — NEVER enter passwords on HTTP sites']},
 ]
 };
-// Additional Study Content
+
+﻿// Additional Study Content
 STUDY.quantitative_aptitude.push(
 {title:'Algebra & Linear Equations',
 intro:'Algebra questions in bank exams involve solving linear equations, quadratic equations, and finding unknown variables. These form the foundation of many other quantitative topics.',
@@ -1332,6 +1341,7 @@ examples:[
 ],
 tips:['Assumption: look for the "missing link" between premise and conclusion','Inference must follow NECESSARILY — not probably, not possibly','Strengthener must DIRECTLY support the specific conclusion','Weakener must attack the logic or evidence, not just introduce doubt'],
 mistakes:['Confusing inference (what must be true) with conclusion (what might be true)','Picking assumptions that are too obvious (almost definitionally true)','Weakener that attacks a related issue but not the specific argument\'s logic']});
+
 const DESC_DATA={
 essays:[
 {topic:'Financial Inclusion in India: Opportunities and Challenges',
@@ -1656,6 +1666,7 @@ dos:['Know the specific numbers (CET1 4.5%, Tier 1 6%, Total 8%)','Know India\'s
 donts:['Don\'t confuse Basel III with Basel II (Basel II was pre-2008, less stringent)','Don\'t forget the liquidity standards (LCR, NSFR) — capital adequacy alone is not Basel III']}
 ]}
 ]};
+
 // ═══ VOCABULARY BANK ═══
 const VOCAB_BANK={
 banking_terms:{
@@ -2010,6 +2021,7 @@ data:[
 {item:'Unemployment Rate (PLFS)',value:'~7.2%',note:'Urban youth unemployment higher at ~17%'},
 {item:'Power Sector Installed Capacity',value:'900+ GW target by 2032',note:'Current: 440 GW; Renewable: 140 GW'},
 ]}};
+
 // ═══ FULL MOCK TEST PAPERS ═══
 // Static mock papers with complete questions for offline practice
 
@@ -2161,6 +2173,7 @@ sections:[
   }
 })();
 
+
 // ═══ ESI NOTES — Economic & Social Issues (RBI Grade B Paper I) ═══
 // Comprehensive notes for RBI Grade B Phase 2 Paper I
 
@@ -2276,6 +2289,7 @@ examTips:'Know all four monetary aggregates (M0 to M3) and their components. The
 }
 ]}
 ]};
+
 // ═══ COMPREHENSIVE GK & CURRENT AFFAIRS DATA BANK ═══
 
 const GK_ONELINERS={
@@ -2721,6 +2735,7 @@ persons:[
 {name:'Arthur Lewis',role:'Nobel 1979; Dual Sector Model',note:'Labor surplus theory; Lewis Turning Point; development economics pioneer'},
 {name:'A.P.J. Abdul Kalam',role:'11th President of India (2002-2007)',note:'Missile Man of India; Children\'s Day (India) now observed on his birthday (Oct 15) — actually birthday was Oct 15 not Nov 14 which remains Nehru birthday'},
 ]};
+
 // ═══ FINANCE & MANAGEMENT — Complete Notes for RBI Grade B Paper III ═══
 
 const FM_NOTES={
@@ -2780,6 +2795,7 @@ text:'Enterprise Risk Management (ERM) is a comprehensive, holistic approach to 
 }
 ]}
 ]};
+
 // ═══ QUANTITATIVE APTITUDE — Comprehensive Tricks & Shortcuts ═══
 
 const QUANT_GUIDE={
@@ -3105,6 +3121,7 @@ trick:'Always use combinations for drawing cards (order doesn\'t matter).',
 ans:'1/221'}
 ]}
 ]};
+
 // ═══ MODEL ESSAYS & DESCRIPTIVE WRITING — Complete Guide ═══
 
 const MODEL_ESSAYS={
@@ -3208,6 +3225,7 @@ The MPC's February 2025 decision to cut the repo rate by 25 basis points to 6.25
 outline:['Opening: Price stability as bedrock, inflation\'s harms','Inflation targeting framework: MPC, 4%±2%, accountability','Transmission mechanism: Repo → MCLR → lending rates → inflation (complex chain)','EBR system: Improvement in transmission','Limitations: Supply-side inflation, blunt instrument problem','Global spillovers: US Fed, rupee depreciation, imported inflation','February 2025 rate cut: Calibrated response','Conclusion: Institutional framework for uncertainty navigation']
 }
 ]};
+
 // ═══ COMPLETE REASONING GUIDE — Strategy, Types, and Solved Examples ═══
 
 const REASONING_GUIDE={
@@ -3460,6 +3478,7 @@ ANSWER: B`
 }
 ]}
 ]};
+
 // ═══ COMPLETE ENGLISH LANGUAGE GUIDE FOR BANK EXAMS ═══
 
 const ENGLISH_GUIDE={
@@ -3690,6 +3709,7 @@ explanation:'"Neither...nor" — verb agrees with nearer subject ("directors" = 
 }
 ]}
 ]};
+
 // ═══ COMPREHENSIVE BANKING KNOWLEDGE BASE ═══
 
 const BANKING_KNOWLEDGE={
@@ -3894,6 +3914,7 @@ Professional codes of conduct: IIBF's code for banking professionals; RBI's Fair
 Board-Level Governance: Independent directors (majority) provide oversight of management. Key board committees: Audit Committee (financial reporting, internal controls), Risk Management Committee (risk appetite, enterprise risk), Nomination and Remuneration Committee (CEO and board appointments, pay), Stakeholder Relationship Committee (depositor and shareholder grievances). Good governance requires: diversity (skills, gender, background), independence (not just nominally), engagement (actually reading and questioning management reports), and accountability (to all stakeholders, not just shareholders).`
 }
 ]};
+
 // ═══ COMPREHENSIVE BANKING REFERENCE — Final Addition ═══
 
 // 300+ Additional MCQ Questions
@@ -4009,6 +4030,7 @@ privateRanking:[
 {rank:7,bank:'Federal Bank',totalAssets:'₹3+ lakh crore',branches:'1,600+',note:'Headquartered in Kerala'},
 {rank:8,bank:'IDFC First Bank',totalAssets:'₹2.5+ lakh crore',branches:'950+',note:'Formed by IDFC Bank-Capital First merger'}
 ]};
+
 // ═══ EXTENDED BANKING TERMINOLOGY & CONCEPTS ═══
 
 const BANKING_TERMS_EXT={
@@ -4214,6 +4236,7 @@ const MORE_ONELINERS=[
 'Cashless Insurance: Digital settlement of health claims without patient paying upfront; growing rapidly',
 'AFTER: Automated Fraud and error Transfer Exchange Repository — IRDAI fraud tracking system'
 ];
+
 // ═══ COMPREHENSIVE DATA INTERPRETATION PRACTICE SETS ═══
 // 20 Complete DI Sets with Varied Data Formats
 
@@ -4255,6 +4278,7 @@ Q.push(
 {id:'di064',s:'quantitative_aptitude',t:'data_interpretation',d:'medium',q:'Sector-wise bank credit FY24 (₹L Cr): Industry:41, Agriculture:22, Services:54, Retail:43. If retail grows at 20% and services at 15% in FY25, what is % share of retail in total in FY25?',o:['24%','26%','27%','28%'],c:2,e:'Retail FY25=43×1.2=51.6. Services FY25=54×1.15=62.1. Others unchanged: 41+22=63. Total FY25=51.6+62.1+63=176.7. Retail share=51.6/176.7×100=29.2%. Closest: D=28% or 29%. Let me go with D.',x:['sbi_mains']},
 {id:'di065',s:'quantitative_aptitude',t:'data_interpretation',d:'hard',q:'Monthly NPA trend for Bank X (₹Cr): Apr=12000, Jun=12800, Aug=13200, Oct=12900, Dec=12400. Average NPA over 5 data points?',o:['₹12,550 Cr','₹12,660 Cr','₹12,700 Cr','₹12,800 Cr'],c:1,e:'Sum = 12000+12800+13200+12900+12400 = 63300. Average = 63300/5 = 12660.',x:['sbi_mains']},
 );
+
 if(typeof Q==='undefined')window.Q=[];
 
 // ═══════════════════════════════════════════════════════════════
@@ -4503,6 +4527,7 @@ Q.push(
 );
 
 // Total: adds ~95 questions to Q[]
+
 if(typeof Q==='undefined')window.Q=[];
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -5236,6 +5261,7 @@ Q.push(
 );
 
 // Total: adds ~60 questions to Q[]
+
 if(typeof Q==='undefined')window.Q=[];
 
 // ═══════════════════════════════════════════════════════════
@@ -5488,6 +5514,7 @@ Q.push(
 );
 
 // Total: adds ~105 questions to Q[]
+
 if(typeof Q==='undefined')window.Q=[];
 
 // ============================================================
@@ -6643,6 +6670,7 @@ Q.push({
 
 // Total: adds ~125 questions to Q[]
 
+
 // ═══ STATE ═══
 const S={
   page:'dashboard',key:localStorage.getItem('bpp_k')||'',gkey:localStorage.getItem('bpp_g')||'',nkey:localStorage.getItem('bpp_nk')||'',
@@ -6705,14 +6733,14 @@ const DQ_POOL=[
   {q:'Which of the following is NOT a function of commercial banks?',o:['Accepting deposits','Printing currency notes','Lending loans','Providing locker facilities'],c:1,e:'Printing currency is the exclusive function of the central bank (RBI).'},
   {q:'NABARD stands for',o:['National Bank for Agriculture and Rural Development','National Bureau of Agriculture and Rural Districts','National Banking and Rural Development','None of these'],c:0,e:'NABARD – National Bank for Agriculture and Rural Development, estd 1982.'},
   {q:'What is the full form of SWIFT in banking?',o:['Society for Worldwide Interbank Financial Telecommunication','System for Wire Interbank Financial Transfer','Secure Worldwide Interbank Finance Technology','None of these'],c:0,e:'SWIFT enables secure international money and security transfers between banks.'},
-  {q:'The minimum capital adequacy ratio (CAR) for Indian banks as per Basel III norms is',o:['8%','9%','10%','12%'],c:1,e:'RBI mandates CAR of 9% for Indian banks (higher than Basel III's 8%).'},
+  {q:'The minimum capital adequacy ratio (CAR) for Indian banks as per Basel III norms is',o:['8%','9%','10%','12%'],c:1,e:'RBI mandates CAR of 9% for Indian banks (higher than Basel III norm of 8%).'},
   {q:'Which index measures inflation at the consumer level in India?',o:['WPI','CPI','BSE Sensex','GDP Deflator'],c:1,e:'CPI (Consumer Price Index) measures price changes at the retail/consumer level.'},
   {q:'NEFT transactions are settled in',o:['Real time','Batches throughout the day','Once a day','Twice a day'],c:1,e:'NEFT settles in half-hourly batches. RTGS settles in real time.'},
   {q:'The Statutory Liquidity Ratio (SLR) requires banks to maintain liquid assets as a percentage of their',o:['Net demand and time liabilities (NDTL)','Total assets','Total deposits','Capital funds'],c:0,e:'SLR is a % of NDTL that banks must maintain in govt securities/gold/cash.'},
   {q:'Which of the following is a Capital Market instrument?',o:['Treasury Bill','Certificate of Deposit','Equity Share','Commercial Paper'],c:2,e:'Equity shares are long-term capital market instruments. T-Bills, CDs, CPs are money market instruments.'},
   {q:'The headquarters of SEBI is in',o:['New Delhi','Mumbai','Hyderabad','Bengaluru'],c:1,e:'SEBI (Securities and Exchange Board of India) HQ is in Mumbai (Bandra Kurla Complex).'},
   {q:'What does NPA stand for in banking?',o:['Net Profit Account','Non-Performing Asset','New Profit Analysis','National Payment Authority'],c:1,e:'NPA: a loan where borrower has not made interest or principal payments for 90+ days.'},
-  {q:'The term "Fiscal Policy" refers to',o:['RBI's monetary decisions','Government's tax and spending decisions','Exchange rate management','Foreign trade policy'],c:1,e:'Fiscal policy = government decisions on taxation and public expenditure.'},
+  {q:'The term "Fiscal Policy" refers to',o:['RBI monetary decisions','Government tax and spending decisions','Exchange rate management','Foreign trade policy'],c:1,e:'Fiscal policy = government decisions on taxation and public expenditure.'},
   {q:'Pradhan Mantri Jan Dhan Yojana (PMJDY) was launched in the year',o:['2012','2013','2014','2015'],c:2,e:'PMJDY launched on 28 August 2014 to ensure financial inclusion for all households.'},
   {q:'Which of the following is the regulator of insurance sector in India?',o:['RBI','SEBI','IRDAI','PFRDA'],c:2,e:'IRDAI – Insurance Regulatory and Development Authority of India regulates insurance.'},
   {q:'The concept of "Priority Sector Lending" mandates banks to lend what % of ANBC to priority sectors?',o:['30%','35%','40%','45%'],c:2,e:'Banks must lend 40% of Adjusted Net Bank Credit to priority sectors (agriculture, MSME, etc.).'},
@@ -7839,3 +7867,4 @@ init();
 </script>
 </body>
 </html>
+
