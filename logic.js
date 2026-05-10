@@ -1,4 +1,25 @@
 
+// ═══ ACCESS GATE ═══
+window.checkAccess=function(){
+  const val=(document.getElementById('access-input')?.value||'').trim().toUpperCase();
+  const code=(localStorage.getItem('bpp_code')||'BANKPREP2025').toUpperCase();
+  if(val===code){
+    localStorage.setItem('bpp_auth',String(Date.now()+(30*86400000)));
+    const gate=document.getElementById('access-gate');
+    if(gate){gate.style.opacity='0';gate.style.transition='opacity .4s';setTimeout(()=>gate.remove(),400);}
+  }else{
+    const err=document.getElementById('access-err');if(err)err.style.display='block';
+    const inp=document.getElementById('access-input');
+    if(inp){inp.style.borderColor='#EF4444';setTimeout(()=>{inp.style.borderColor='';},1500);}
+  }
+};
+function initAccessGate(){
+  const gate=document.getElementById('access-gate');if(!gate)return;
+  const auth=localStorage.getItem('bpp_auth');
+  if(auth&&parseInt(auth)>Date.now()){gate.remove();return;}
+  document.getElementById('access-input')?.addEventListener('keydown',e=>{if(e.key==='Enter')window.checkAccess();});
+}
+
 // ═══ STATE ═══
 const S={
   page:'dashboard',key:localStorage.getItem('bpp_k')||'',gkey:localStorage.getItem('bpp_g')||'',nkey:localStorage.getItem('bpp_nk')||'',
@@ -1143,6 +1164,15 @@ function rSettings(){
       <h3 style="font-weight:700;margin-bottom:12px">What Needs API Key</h3>
       ${[['Study Hub, All Practice (static), Mock Tests, Flashcards','✅ Works without any key'],['Interview Prep, Descriptive templates, Exam Planner','✅ Works without any key'],['AI Question Generation (unlimited fresh questions)','🔑 Groq or Gemini'],['AI Mock Test Mode (fresh unique questions)','🔑 Groq or Gemini'],['Essay AI Feedback','🔑 Groq or Gemini'],['Current Affairs AI Digest','🔑 Groq or Gemini'],['Current Affairs LIVE News','📡 GNews key + AI key']].map(([f,s])=>`<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f1f5f9;font-size:13px"><span>${f}</span><span style="font-weight:600;color:${s.includes('✅')?'#059669':s.includes('📡')?'#2563eb':'#d97706'};flex-shrink:0;margin-left:12px">${s}</span></div>`).join('')}
     </div>
+    <div class="card" style="border:2px solid #4F46E5;margin-bottom:14px">
+      <h3 style="font-weight:700;margin-bottom:6px">🔐 Access Code <span style="font-size:12px;color:#6B7280;font-weight:400">(share this code with people you want to grant access)</span></h3>
+      <p style="font-size:12px;color:#6B7280;margin-bottom:10px">Current code: <b style="color:#4F46E5;letter-spacing:2px">${localStorage.getItem('bpp_code')||'BANKPREP2025'}</b></p>
+      <div style="display:flex;gap:8px;margin-bottom:10px">
+        <input type="text" id="newCode" class="input" placeholder="Enter new access code" style="flex:1;text-transform:uppercase" maxlength="20">
+        <button class="btn btn-primary" onclick="const v=document.getElementById('newCode').value.trim().toUpperCase();if(v.length>=4){localStorage.setItem('bpp_code',v);alert('Access code updated to: '+v);}else{alert('Code must be at least 4 characters.');}">Save</button>
+      </div>
+      <button class="btn btn-secondary btn-sm" onclick="if(confirm('Lock the app now? You will need to re-enter the access code.')){localStorage.removeItem('bpp_auth');location.reload();}">🔒 Lock App Now</button>
+    </div>
     <div class="card" style="background:#fef2f2;border:1.5px solid #fecaca">
       <h3 style="color:#991b1b;font-weight:700;margin-bottom:8px">⚠️ Reset All Data</h3>
       <p style="font-size:13px;color:#64748b;margin-bottom:12px">Clears all progress, streaks, bookmarks, and API keys from this browser.</p>
@@ -1156,7 +1186,7 @@ window.saveK=function(){S.key=document.getElementById('kIn').value.trim();save()
 // ═══ INIT ═══
 function init(){
   document.getElementById('nav').innerHTML=NAV_ITEMS.map(([p,ic,lb])=>`<a class="nl" data-p="${p}" onclick="go('${p}')">${ic} <span>${lb}</span></a>`).join('');
-  applyDark();initFP();upStreak();go('dashboard');
+  initAccessGate();applyDark();initFP();upStreak();go('dashboard');
 
   // Keyboard shortcuts
   let kbdTimeout;
