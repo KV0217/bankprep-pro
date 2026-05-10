@@ -1,0 +1,22 @@
+{
+  "name": "bankprep-pro",
+  "version": "2.0.0",
+  "description": "Complete SBI PO & RBI Grade B Preparation Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "powershell -ExecutionPolicy Bypass -File build.ps1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
