@@ -7,3 +7,5 @@ Thumbs.db
 backend/
 frontend/
 bankprep.html
+
+.vercel
