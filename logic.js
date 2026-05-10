@@ -68,7 +68,7 @@ const DQ_POOL=[
   {q:'Which of the following is a Capital Market instrument?',o:['Treasury Bill','Certificate of Deposit','Equity Share','Commercial Paper'],c:2,e:'Equity shares are long-term capital market instruments. T-Bills, CDs, CPs are money market instruments.'},
   {q:'The headquarters of SEBI is in',o:['New Delhi','Mumbai','Hyderabad','Bengaluru'],c:1,e:'SEBI (Securities and Exchange Board of India) HQ is in Mumbai (Bandra Kurla Complex).'},
   {q:'What does NPA stand for in banking?',o:['Net Profit Account','Non-Performing Asset','New Profit Analysis','National Payment Authority'],c:1,e:'NPA: a loan where borrower has not made interest or principal payments for 90+ days.'},
-  {q:'The term "Fiscal Policy" refers to',o:['RBI monetary decisions','Government tax and spending decisions','Exchange rate management','Foreign trade policy'],c:1,e:'Fiscal policy = government decisions on taxation and public expenditure.'},
+  {q:'The term "Fiscal Policy" refers to',o:["RBI monetary decisions",'Government tax and expenditure decisions','Exchange rate management','Foreign trade policy'],c:1,e:'Fiscal policy refers to government decisions on taxation and public expenditure.'},
   {q:'Pradhan Mantri Jan Dhan Yojana (PMJDY) was launched in the year',o:['2012','2013','2014','2015'],c:2,e:'PMJDY launched on 28 August 2014 to ensure financial inclusion for all households.'},
   {q:'Which of the following is the regulator of insurance sector in India?',o:['RBI','SEBI','IRDAI','PFRDA'],c:2,e:'IRDAI – Insurance Regulatory and Development Authority of India regulates insurance.'},
   {q:'The concept of "Priority Sector Lending" mandates banks to lend what % of ANBC to priority sectors?',o:['30%','35%','40%','45%'],c:2,e:'Banks must lend 40% of Adjusted Net Bank Credit to priority sectors (agriculture, MSME, etc.).'},
@@ -1195,4 +1195,5 @@ init();
 </script>
 </body>
 </html>
+
 

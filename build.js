@@ -9,7 +9,7 @@ const files = [
   'reasoning_guide.js','english_guide.js','mega_content.js',
   'final_push.js','banking_terms_ext.js','di_mega.js',
   'english_rc.js','computer_awareness.js','static_gk.js',
-  'vocab_mcq.js','logic.js'
+  'vocab_mcq.js','para_jumbles.js','quant_special.js','mock_papers2.js','logic.js'
 ];
 
 fs.mkdirSync('public', { recursive: true });
